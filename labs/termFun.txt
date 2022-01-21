@@ -12,3 +12,6 @@ cd Spring2022/labs
 
 # Use 'cat' to view a text file
 cat termFun.txt
+
+# Use 'pwd' to see your current directory
+pwd
