@@ -169,7 +169,7 @@ plot(mtcars$hp, mtcars$mpg, type = 'h') # histogram-like lines
 
 ### Background
 #### Random Variables
-Informally, a random variable is a variable whose values depend on outcomes of a random event. The domain of a random variable is called the \textit{sample space}, or the set of possible outcomes of event (such as heads or tails in a coin toss). Random variables have \textit{probability distributions} associated with its sample space. Random variables can be discrete (finite or countable set of values), the probability distribution of which can be described by a probability mass function (PMF), or continuous (all values in an interval), the probability distribution of which can be described by a probability density function (PDF).
+Informally, a random variable is a variable whose values depend on outcomes of a random event. The domain of a random variable is called the *sample space*, or the set of possible outcomes of event (such as heads or tails in a coin toss). Random variables have *probability distributions* associated with its sample space. Random variables can be discrete (finite or countable set of values), the probability distribution of which can be described by a probability mass function (PMF), or continuous (all values in an interval), the probability distribution of which can be described by a probability density function (PDF).
 
 #### Probability Distributions
 A probability distribution is a function which gives the probability of occurrence of an event confined within
