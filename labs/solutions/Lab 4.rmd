@@ -1,0 +1,65 @@
+---
+title: "Lab 4"
+author: "James Mbata"
+date: "2/17/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1.  Draw 100 random samples from the normal distribution with a mean of 50, and standard deviation of 5. Plot the histogram of these samples.
+
+```{r}
+x = rnorm(100, 50, 5)
+hist(x, ylim = c(0,40))
+```
+
+2.  Show that 50% of the density is to the left of the mean above.
+
+```{r}
+pnorm(50, 50, 5)
+```
+
+3. Repeat part 1, but with standard deviations of 10, and then 100. Describe, in comments within the script, how the spread of the data (or domain/range) change with standard deviation.
+
+```{r}
+x = rnorm(100, 50, 10)
+hist(x, ylim = c(0,40))
+
+x = rnorm(100, 50, 100)
+hist(x, ylim = c(0,40))
+
+# As the standard deviation increases, the values within the range of the distribution also increases.
+```
+
+4. Now draw again 100 random samples from the normal distribution with a mean of 50, and standard deviation of 5. Calculate the densities/probabilities of these random samples.
+
+```{r}
+x = rnorm(100, 50, 5)
+y = dnorm(x, 50, 5)
+y
+```
+
+5. Plot the samples and densities calculated in part 4. This should look similar to the first figure in the Background section.
+
+```{r}
+plot(x,y)
+```
+
+6.Calculate the cumulative densities of the same 100 samples from part 4. Plot the samples and their cumulative densities. This should look similar to the second figure in the Background section. What does the far-most right point mean?
+
+7. Under your plot function from part 6, type in the following code: abline(h=0.5,v=50). This should have created grid lines on your plot. In trying to understand the relationship between PDFs and CDFs, how does the point in the graph outlined by the gridlines correspond to your answer in part 2. Answer in comments.
+
+
+```{r}
+y = ecdf(x)
+plot(y)
+abline(h=0.5,v=50)
+
+#This point corresponds to the point at which 50% of the density is to the left (there is a 0.5 that a random variable will be less than the mean).
+```
+
+
+
